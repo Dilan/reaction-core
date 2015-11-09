@@ -2,7 +2,7 @@ Package.describe({
   summary: "Reaction Commerce Core",
   name: "reactioncommerce:core",
   version: "0.9.4",
-  git: "https://github.com/reactioncommerce/reaction-core.git"
+  git: "https://github.com/Dilan/reaction-core.git"
 });
 
 Npm.depends({
