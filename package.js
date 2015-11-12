@@ -69,6 +69,7 @@ Package.onUse(function (api) {
   api.use("cfs:graphicsmagick@0.0.18");
   api.use("cfs:gridfs@0.0.33");
   api.use("cfs:filesystem@0.1.2");
+  api.use("ifd:cfss3@0.0.1");
   api.use("cfs:ui@0.1.3");
   api.use("raix:ui-dropped-event@0.0.7");
   api.use("meteorhacks:ssr@2.2.0");
@@ -91,6 +92,7 @@ Package.onUse(function (api) {
   api.imply("cfs:graphicsmagick");
   api.imply("cfs:filesystem");
   api.imply("cfs:gridfs");
+  api.imply("ifd:cfss3");
   api.imply("raix:ui-dropped-event");
   api.imply("matb33:collection-hooks");
   api.imply("alanning:roles");

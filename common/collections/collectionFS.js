@@ -6,14 +6,16 @@ FS.HTTP.setHeadersForGet([
   ["Cache-Control", "public, max-age=31536000"]
 ]);
 
-var uploadPath = '/Users/dilan/upload/'; // Meteor.settings.IMAGE_UPLOAD_PATH;
 ReactionCore.Collections.Media = new FS.Collection("Media", {
   stores: [
-    new FS.Store.FileSystem("images",    { path: uploadPath }),
-    new FS.Store.FileSystem("large",     { path: uploadPath }),
-    new FS.Store.FileSystem("medium",    { path: uploadPath }),
-    new FS.Store.FileSystem("small",     { path: uploadPath }),
-    new FS.Store.FileSystem("thumbnail", { path: uploadPath })
+    new FS.Store.IFDS3("images", {
+      path: Meteor.settings['TMP_UPLOAD_PATH'],
+      s3auth: Meteor.settings['s3auth']
+    }),
+    new FS.Store.FileSystem("large",     { path: Meteor.settings['TMP_UPLOAD_PATH'] }),
+    new FS.Store.FileSystem("medium",    { path: Meteor.settings['TMP_UPLOAD_PATH'] }),
+    new FS.Store.FileSystem("small",     { path: Meteor.settings['TMP_UPLOAD_PATH'] }),
+    new FS.Store.FileSystem("thumbnail", { path: Meteor.settings['TMP_UPLOAD_PATH'] })
   ],
   filter: {
     allow: {
