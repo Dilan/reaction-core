@@ -16,7 +16,7 @@
 
 <template name="imageDetail">
   <li class="gallery-sortable" data-index="{{_id}}">
-    <img src="{{url uploading='/resources/placeholder.gif' storing='/resources/placeholder.gif' store='large'}}" class="img-responsive" alt="{{title}}">
+    <img src="{{url uploading='/resources/placeholder.gif' storing='/resources/placeholder.gif' store='images'}}" class="img-responsive" alt="{{title}}">
     {{#unless this.isUploaded}}
       {{> FS.UploadProgressBar bootstrap=true}}
     {{/unless}}
